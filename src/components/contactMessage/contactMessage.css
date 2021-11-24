@@ -1,16 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-.App {
-  display: flex;
-  flex-direction: row;
-}
-
 .einstein > img {
   margin: 15px;
   width: 45px;
   height: 45px;
   border-radius: 45px;
 }
-
 .user-and-text {
   text-align: left;
   margin-left: auto;
@@ -20,8 +13,4 @@
 .name-and-message > h4 {
   margin-top: 16px;
   margin-bottom: 0;
-}
-
-a {
-  color: unset !important;
 }

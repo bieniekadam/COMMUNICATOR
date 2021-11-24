@@ -1,0 +1,5 @@
+.conversation {
+  height: calc(100% - 216px);
+  background-color: white;
+  color: black;
+}
