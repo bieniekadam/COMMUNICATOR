@@ -1,8 +1,11 @@
 import { FaUserPlus } from "react-icons/fa";
 import "./LeftColumn.css";
 import { ContactMessage } from "../contactMessage/contactMessage";
+import { MOCKED_MESSAGES } from "../../mockData/conversationPreview";
 
 export function LeftColumn() {
+  const messages = MOCKED_MESSAGES;
+
   return (
     <header className="left-column">
       <div className="top-left-bar">
@@ -10,8 +13,9 @@ export function LeftColumn() {
 
         <FaUserPlus className="fa-user-plus" />
       </div>
-
-      <ContactMessage />
+      {messages.map((message) => (
+        <ContactMessage {...message} />
+      ))}
     </header>
   );
 }

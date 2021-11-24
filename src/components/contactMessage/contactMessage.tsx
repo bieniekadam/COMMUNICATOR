@@ -1,13 +1,15 @@
+import { ConversationPreview } from "../../Interfaces/conversationPreview.interface";
 import "./contactMessage.css";
-export function ContactMessage() {
+
+export function ContactMessage(message: ConversationPreview) {
   return (
     <div className="user-and-text">
-      <div className="einstein">
-        <img src="Albert_Einstein_Head.jpg" />
+      <div className="avatar">
+        <img src={message.avatarUrl}/>
       </div>
-      <div className="name-and-message">
-        <h4>Albert Einstein</h4>
-        <span>text</span>
+      <div className="name-and-text">
+        <h4>{message.name}</h4>
+        <span>{message.text}</span>
       </div>
     </div>
   );
