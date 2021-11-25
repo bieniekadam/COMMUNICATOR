@@ -3,6 +3,10 @@ import "./LeftColumn.css";
 import { ContactMessage } from "../contactMessage/contactMessage";
 import { MOCKED_MESSAGES } from "../../mockData/conversationPreview";
 
+function openPopup() {
+  console.log("asdf");
+}
+
 export function LeftColumn() {
   const messages = MOCKED_MESSAGES;
 
@@ -11,7 +15,7 @@ export function LeftColumn() {
       <div className="top-left-bar">
         <img src="elComunicadorLogo.png" className="logo-left-panel" />
 
-        <FaUserPlus className="fa-user-plus" />
+        <FaUserPlus onClick={openPopup} className="fa-user-plus" />
       </div>
       {messages.map((message) => (
         <ContactMessage {...message} />
