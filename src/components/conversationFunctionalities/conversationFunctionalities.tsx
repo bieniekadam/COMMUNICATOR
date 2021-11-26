@@ -3,7 +3,6 @@ import "./conversationFunctionalities.css";
 import { FaPhone, FaVideo, FaCamera } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
-import { CSSProperties } from "react";
 
 export function ConversationFunctionalities() {
   let phoneIconColor = "light-blue";
