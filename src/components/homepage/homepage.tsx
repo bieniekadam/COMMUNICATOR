@@ -1,18 +1,12 @@
-import "./homepage.css";
 import { LeftColumn } from "../leftColumn/LeftColumn";
-import { MessageInput } from "../messageInput/messageInput";
-import { Conversation } from "../conversation/conversation";
+import { RightColumn } from "../rightColumn/rightColumn";
 
 export function Homepage() {
   return (
     <div className="App">
       <LeftColumn />
 
-      <div className="right-column">
-        <Conversation />
-
-        <MessageInput />
-      </div>
+      <RightColumn />
     </div>
   );
 }

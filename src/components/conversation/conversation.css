@@ -2,4 +2,12 @@
   height: calc(100% - 216px);
   background-color: white;
   color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-bubble-margins {
+  margin-top: 6px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
