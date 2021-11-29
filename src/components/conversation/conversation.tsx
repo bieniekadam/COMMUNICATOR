@@ -1,5 +1,6 @@
 import { MessageBubble } from "../messageBubble/messageBubble";
 import "./conversation.css";
+import { messages } from "../mocked/mockedConversation";
 
 export interface Message {
   author: number;
@@ -8,20 +9,6 @@ export interface Message {
 
 export function Conversation() {
   const loggedInUserId = 12;
-  const messages: Message[] = [
-    {
-      author: 12,
-      text: "aspdfoij",
-    },
-    {
-      author: 13,
-      text: "qwerrzrzrzrrzrzr",
-    },
-    {
-      author: 12,
-      text: "zxcv",
-    },
-  ];
 
   return (
     <div className="conversation">
