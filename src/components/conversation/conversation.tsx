@@ -1,13 +1,13 @@
 import { MessageBubble } from "../messageBubble/messageBubble";
 import "./conversation.css";
 
-interface Message {
+export interface Message {
   author: number;
   text: string;
 }
 
 export function Conversation() {
-  const userId = 12;
+  const loggedInUserId = 12;
   const messages: Message[] = [
     {
       author: 12,
@@ -25,10 +25,16 @@ export function Conversation() {
 
   return (
     <div className="conversation">
-      {messages.map((message: Message) => (
-        <div style={{ float: message.author === userId ? "right" : "left" }}>
+      {messages.map((message: Message, index: number) => (
+        <div
+          key={index}
+          className="messageBubbleAlignFunction"
+          style={{
+            marginLeft: message.author === loggedInUserId ? "auto" : "0px",
+          }}
+        >
           <div className="message-bubble-margins">
-            <MessageBubble message={message.text} user={userId} />
+            <MessageBubble message={message} user={loggedInUserId} />
           </div>
         </div>
       ))}
