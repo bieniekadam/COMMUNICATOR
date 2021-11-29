@@ -1,9 +1,11 @@
 .conversation {
-  height: calc(100% - 216px);
+  height: calc(100vh - 245px);
   background-color: white;
   color: black;
   display: flex;
   flex-direction: column;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 .message-bubble-margins {
