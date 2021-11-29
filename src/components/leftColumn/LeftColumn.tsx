@@ -2,24 +2,31 @@ import { FaUserPlus } from "react-icons/fa";
 import "./LeftColumn.css";
 import { ContactMessage } from "../contactMessage/contactMessage";
 import { MOCKED_MESSAGES } from "../../mockData/conversationPreview";
-
-function openPopup() {
-  console.log("asdf");
-}
+import { Popup } from "../popupAddContact/PopupAddContact";
+import { useState } from "react";
 
 export function LeftColumn() {
   const messages = MOCKED_MESSAGES;
+  const [showPopup, setShowPopup] = useState(false);
 
   return (
-    <header className="left-column">
+    <div className="left-column">
       <div className="top-left-bar">
         <img src="elComunicadorLogo.png" className="logo-left-panel" />
 
-        <FaUserPlus onClick={openPopup} className="fa-user-plus" />
+        <FaUserPlus
+          onClick={() => setShowPopup(true)}
+          className="fa-user-plus"
+        />
       </div>
+
       {messages.map((message) => (
         <ContactMessage {...message} />
       ))}
-    </header>
+
+      <Popup trigger={showPopup} setTrigger={setShowPopup}>
+        <h3>My popup</h3>
+      </Popup>
+    </div>
   );
 }
