@@ -1,6 +1,6 @@
 import { FaUserPlus } from "react-icons/fa";
 import "./LeftColumn.css";
-import { ContactMessage } from "../contactMessage/contactMessage";
+import { ConversationPreview } from "../conversationPreview/conversationPreview";
 import { MOCKED_MESSAGES } from "../../mockData/conversationPreview";
 import { Popup } from "../popupAddContact/PopupAddContact";
 import { useState } from "react";
@@ -21,7 +21,7 @@ export function LeftColumn() {
       </div>
 
       {messages.map((message) => (
-        <ContactMessage {...message} />
+        <ConversationPreview {...message} />
       ))}
 
       <Popup trigger={showPopup} setTrigger={setShowPopup}>

@@ -1,7 +1,7 @@
 import { FaMandalorian } from "react-icons/fa";
-import { ConversationPreview } from "../Interfaces/conversationPreview.interface";
+import { ConversationPreviewProps } from "../Interfaces/conversationPreviewProps.interface";
 
-export const MOCKED_MESSAGES: ConversationPreview[] = [
+export const MOCKED_MESSAGES: ConversationPreviewProps[] = [
   {
     name: "Albert Einstein",
     text: "Kup ojczulkowi browarka",
