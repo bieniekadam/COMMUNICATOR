@@ -24,7 +24,12 @@ export function LeftColumn() {
         <ContactMessage {...message} />
       ))}
 
-      <Popup trigger={showPopup} setTrigger={setShowPopup}>
+      <Popup
+        trigger={showPopup}
+        setTrigger={setShowPopup}
+        height="600px"
+        width="300px"
+      >
         <h3>My popup</h3>
       </Popup>
     </div>
