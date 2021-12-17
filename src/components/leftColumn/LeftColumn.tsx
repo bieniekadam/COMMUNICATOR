@@ -1,9 +1,10 @@
 import { FaUserPlus } from "react-icons/fa";
 import "./LeftColumn.css";
-import { ContactMessage } from "../contactMessage/contactMessage";
+import { ContactMessage } from "../ContactMessage/ContactMessage";
 import { MOCKED_MESSAGES } from "../../mockData/conversationPreview";
-import { Popup } from "../popupAddContact/PopupAddContact";
+import { Popup } from "../Popup/Popup";
 import { useState } from "react";
+import { addContact as AddContact } from "../AddContact/AddContact";
 
 export function LeftColumn() {
   const messages = MOCKED_MESSAGES;
@@ -29,8 +30,9 @@ export function LeftColumn() {
         setTrigger={setShowPopup}
         height="600px"
         width="300px"
+        title="Find user"
       >
-        <h3>My popup</h3>
+        <AddContact />
       </Popup>
     </div>
   );

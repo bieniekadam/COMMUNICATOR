@@ -1,5 +1,5 @@
-import { MessageBubble } from "../messageBubble/messageBubble";
-import "./conversation.css";
+import { MessageBubble } from "../MessageBubble/MessageBubble";
+import "./Conversation.css";
 import { messages } from "../mocked/mockedConversation";
 
 export interface Message {

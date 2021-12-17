@@ -1,4 +1,4 @@
-import "./conversationFunctionalities.css";
+import "./ConversationFunctionalities.css";
 
 import { FaPhone, FaVideo, FaCamera } from "react-icons/fa";
 

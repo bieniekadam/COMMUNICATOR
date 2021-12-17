@@ -1,0 +1,37 @@
+.searching-contact > input {
+  top: -50px;
+  height: 19px;
+  width: 250px;
+  position: relative;
+}
+
+.proposed-contact {
+  height: 450px;
+  width: 281.7px;
+  position: relative;
+  left: 9.6px;
+  top: -23px;
+  background-color: white;
+}
+
+.user-picture > img {
+  margin: 14px;
+  width: 45px;
+  height: 45px;
+  border-radius: 55px;
+  float: left;
+}
+
+.user-picture {
+  display: flex;
+  color: black;
+}
+
+.search-button {
+  margin-top: 30px;
+  color: black;
+  position: relative;
+  font-size: 23px;
+  cursor: pointer;
+  top: -43px;
+}

@@ -1,6 +1,6 @@
-import { MessageInput } from "../messageInput/messageInput";
-import { Conversation } from "../conversation/conversation";
-import "./rightColumn.css";
+import { MessageInput } from "../MessageInput/MessageInput";
+import { Conversation } from "../Conversation/Conversation";
+import "./RightColumn.css";
 
 export function RightColumn() {
   return (

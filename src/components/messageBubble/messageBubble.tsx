@@ -1,6 +1,6 @@
-import "./messageBubble.css";
-import "../conversation/conversation";
-import { Message } from "../conversation/conversation";
+import "./MessageBubble.css";
+import "../Conversation/Conversation";
+import { Message } from "../Conversation/Conversation";
 
 export interface MessageBubbleProps {
   message: Message;

@@ -1,7 +1,9 @@
-import "./messageInput.css";
-import { ConversationFunctionalities } from "../conversationFunctionalities/conversationFunctionalities";
+import "./MessageInput.css";
+import { ConversationFunctionalities } from "../ConversationFunctionalities/ConversationFunctionalities";
 
 export function MessageInput() {
+  let text: string;
+
   return (
     <div className="bottom-row">
       <div className="message-input">
@@ -9,7 +11,7 @@ export function MessageInput() {
           <label>Your message:</label>
           <ConversationFunctionalities />
         </div>
-        <textarea />
+        <textarea onChange={(event: any) => (text = event.target.value)} />
         <button className="send-message">Send</button>
       </div>
     </div>

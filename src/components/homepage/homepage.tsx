@@ -1,5 +1,5 @@
-import { LeftColumn } from "../leftColumn/LeftColumn";
-import { RightColumn } from "../rightColumn/rightColumn";
+import { LeftColumn } from "../LeftColumn/LeftColumn";
+import { RightColumn } from "../RightColumn/RightColumn";
 
 export function Homepage() {
   return (
