@@ -1,5 +1,5 @@
-import "./messageInput.css";
-import { ConversationFunctionalities } from "../conversationFunctionalities/conversationFunctionalities";
+import "./MessageInput.css";
+import { ConversationFunctionalities } from "../ConversationFunctionalities/CnversationFunctionalities";
 
 export function MessageInput() {
   return (

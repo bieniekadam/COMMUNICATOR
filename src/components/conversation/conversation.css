@@ -8,6 +8,7 @@
   overflow-y: scroll;
   display: flex;
   flex-direction: column-reverse;
+  border-radius: 8px;
 }
 
 .message-bubble-margins {

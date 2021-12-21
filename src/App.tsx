@@ -1,7 +1,7 @@
 import "./App.css";
-import { LoginPanel } from "./components/loginPanel/loginPanel";
+import { LoginPanel } from "./components/LoginPanel/LoginPanel";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Homepage } from "./components/homepage/homepage";
+import { Homepage } from "./components/Homepage/Homepage";
 
 export default function App() {
   return (

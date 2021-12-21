@@ -1,15 +1,19 @@
 import { ConversationPreviewProps } from "../../Interfaces/conversationPreviewProps.interface";
-import "./conversationPreview.css";
+import "./ConversationPreview.css";
 
-export function ConversationPreview(message: ConversationPreviewProps) {
+export function ConversationPreview(props: ConversationPreviewProps) {
   return (
-    <div className="user-and-text">
+    <div
+      onClick={() => props.setConversationId(props.conversation.conversationId)}
+      className="user-and-text"
+      id="conversationID"
+    >
       <div className="avatar">
-        <img src={message.avatarUrl} />
+        <img src={props.conversation.avatarUrl} />
       </div>
       <div className="name-and-text">
-        <h4>{message.name}</h4>
-        <span>{message.text}</span>
+        <h4>{props.conversation.name}</h4>
+        <span>{props.conversation.text}</span>
       </div>
     </div>
   );
