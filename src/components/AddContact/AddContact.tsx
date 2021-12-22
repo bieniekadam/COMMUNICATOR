@@ -1,7 +1,10 @@
 import "./AddContact.css";
 import { FaSearchPlus } from "react-icons/fa";
+import { ConversationPreview } from "../../Interfaces/conversationPreview.interface";
 
-export function addContact() {
+export function AddContact(props: {
+  addContact: (contact: ConversationPreview) => void;
+}) {
   return (
     <>
       <div className="searching-contact">
@@ -10,8 +13,17 @@ export function addContact() {
       </div>
       <div className="proposed-contact">
         <div className="user-picture">
-          <img src="sc.png"></img>
-          <h3>Karol Wojtyła</h3>
+          <img
+            src="sc.png"
+            onClick={() =>
+              props.addContact({
+                avatarUrl: "sc.png",
+                name: "Karol Wojtyła",
+                text: "",
+              })
+            }
+          ></img>
+          <h3> Karol Wojtyła</h3>
         </div>
       </div>
     </>

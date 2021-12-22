@@ -10,7 +10,7 @@ interface PopupProps {
   title: string;
 }
 
-export function Popup(props: PopupProps) {
+export function Popup(props: PopupProps): JSX.Element {
   return props.trigger ? (
     <div className="background-popup">
       <div

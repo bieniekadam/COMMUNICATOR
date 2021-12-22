@@ -20,11 +20,14 @@
   height: 45px;
   border-radius: 55px;
   float: left;
+  cursor: pointer;
 }
 
 .user-picture {
   display: flex;
   color: black;
+  position: relative;
+  /* cursor: pointer; */
 }
 
 .search-button {

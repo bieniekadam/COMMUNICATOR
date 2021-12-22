@@ -1,7 +1,7 @@
 import { ConversationPreview } from "../../Interfaces/conversationPreview.interface";
 import "./ContactMessage.css";
 
-export function ContactMessage(message: ConversationPreview) {
+export function ContactMessage(message: ConversationPreview): JSX.Element {
   return (
     <div className="user-and-text">
       <div className="avatar">

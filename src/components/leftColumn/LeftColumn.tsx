@@ -4,11 +4,16 @@ import { ContactMessage } from "../ContactMessage/ContactMessage";
 import { MOCKED_MESSAGES } from "../../mockData/conversationPreview";
 import { Popup } from "../Popup/Popup";
 import { useState } from "react";
-import { addContact as AddContact } from "../AddContact/AddContact";
+import { AddContact as AddContact } from "../AddContact/AddContact";
+import { ConversationPreview } from "../../Interfaces/conversationPreview.interface";
 
 export function LeftColumn() {
   const messages = MOCKED_MESSAGES;
   const [showPopup, setShowPopup] = useState(false);
+
+  function setNewContact(contact: ConversationPreview) {
+    messages.push(contact);
+  }
 
   return (
     <div className="left-column">
@@ -32,7 +37,7 @@ export function LeftColumn() {
         width="300px"
         title="Find user"
       >
-        <AddContact />
+        <AddContact addContact={setNewContact} />
       </Popup>
     </div>
   );

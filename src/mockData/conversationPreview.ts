@@ -1,3 +1,4 @@
+import { ImgHTMLAttributes } from "react";
 import { FaMandalorian } from "react-icons/fa";
 import { ConversationPreview } from "../Interfaces/conversationPreview.interface";
 
