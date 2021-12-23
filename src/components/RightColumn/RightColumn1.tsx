@@ -1,4 +1,4 @@
-import { MessageInput } from "../MessageInput/MessageInput";
+import { MessageInput } from "../MessageInput/MessageInput1";
 import { ConversationComponent } from "../Conversation/Conversation";
 import "./RightColumn.css";
 import { RightColumnProps } from "../../Interfaces/rightColumnProps.interface";

@@ -1,5 +1,5 @@
 import "./App.css";
-import { LoginPanel } from "./components/LoginPanel/LoginPanel";
+import { LoginPanel } from "./components/LoginPanel/LoginPanel1";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Homepage } from "./components/Homepage/Homepage";
 
