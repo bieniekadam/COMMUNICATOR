@@ -1,17 +1,19 @@
 import { FaUserPlus } from "react-icons/fa";
 import "./LeftColumn.css";
-import { ContactMessage } from "../ContactMessage/ContactMessage";
-import { MOCKED_MESSAGES } from "../../mockData/conversationPreview";
-import { Popup } from "../Popup/Popup";
+import { Link } from "react-router-dom";
+import { LeftColumnProps } from "../../Interfaces/leftColumnProps.interface";
 import { useState } from "react";
-import { AddContact as AddContact } from "../AddContact/AddContact";
-import { ConversationPreview } from "../../Interfaces/conversationPreview.interface";
+import { ConversationPreviewData } from "../../Interfaces/conversationPreviewProps.interface";
+import { MOCKED_MESSAGES } from "../../mockData/mockedConversationPreview";
+import { AddContact } from "../AddContact/AddContact";
+import { ConversationPreview } from "../ConversationPreview/ConversationPreview";
+import Popup from "../Popup/Popup";
 
-export function LeftColumn() {
+export function LeftColumn(props: LeftColumnProps) {
   const messages = MOCKED_MESSAGES;
   const [showPopup, setShowPopup] = useState(false);
 
-  function setNewContact(contact: ConversationPreview) {
+  function setNewContact(contact: ConversationPreviewData) {
     messages.push(contact);
   }
 
@@ -27,7 +29,10 @@ export function LeftColumn() {
       </div>
 
       {messages.map((message) => (
-        <ContactMessage {...message} />
+        <ConversationPreview
+          conversation={message}
+          setConversationId={props.setConversationId}
+        />
       ))}
 
       <Popup
@@ -39,6 +44,10 @@ export function LeftColumn() {
       >
         <AddContact addContact={setNewContact} />
       </Popup>
+
+      <Link to="/login">
+        <button className="log-out-button">Log out</button>
+      </Link>
     </div>
   );
 }

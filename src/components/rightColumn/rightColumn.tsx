@@ -1,11 +1,14 @@
 import { MessageInput } from "../MessageInput/MessageInput";
-import { Conversation } from "../Conversation/Conversation";
+import { ConversationComponent } from "../Conversation/Conversation";
 import "./RightColumn.css";
+import { RightColumnProps } from "../../Interfaces/rightColumnProps.interface";
 
-export function RightColumn() {
+export function RightColumn(props: RightColumnProps) {
   return (
     <div className="right-column">
-      <Conversation />
+      <ConversationComponent
+        selectedConversationId={props.selectedConversationId}
+      />
 
       <MessageInput />
     </div>

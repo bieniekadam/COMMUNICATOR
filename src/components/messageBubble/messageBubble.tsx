@@ -1,11 +1,6 @@
 import "./MessageBubble.css";
 import "../Conversation/Conversation";
-import { Message } from "../Conversation/Conversation";
-
-export interface MessageBubbleProps {
-  message: Message;
-  user: number;
-}
+import { MessageBubbleProps } from "../../Interfaces/messageBubbleProps.interface";
 
 export function MessageBubble(props: MessageBubbleProps) {
   return (

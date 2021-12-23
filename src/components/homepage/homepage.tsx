@@ -1,12 +1,18 @@
 import { LeftColumn } from "../LeftColumn/LeftColumn";
 import { RightColumn } from "../RightColumn/RightColumn";
+import { mockedConversations } from "../mocked/MockedConversations";
+import { useState } from "react";
 
 export function Homepage() {
+  const [conversationId, setConversationId] = useState(
+    mockedConversations[0].conversationId
+  );
+
   return (
     <div className="App">
-      <LeftColumn />
+      <LeftColumn setConversationId={setConversationId} />
 
-      <RightColumn />
+      <RightColumn selectedConversationId={conversationId} />
     </div>
   );
 }

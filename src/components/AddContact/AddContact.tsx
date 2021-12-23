@@ -1,9 +1,12 @@
 import "./AddContact.css";
 import { FaSearchPlus } from "react-icons/fa";
-import { ConversationPreview } from "../../Interfaces/conversationPreview.interface";
+import {
+  ConversationPreviewData,
+  ConversationPreviewProps,
+} from "../../Interfaces/conversationPreviewProps.interface";
 
 export function AddContact(props: {
-  addContact: (contact: ConversationPreview) => void;
+  addContact: (contact: ConversationPreviewData) => void;
 }) {
   return (
     <>
@@ -20,6 +23,7 @@ export function AddContact(props: {
                 avatarUrl: "sc.png",
                 name: "Karol Wojtyła",
                 text: "",
+                conversationId: 0,
               })
             }
           ></img>

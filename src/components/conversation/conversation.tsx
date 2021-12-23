@@ -1,30 +1,40 @@
 import { MessageBubble } from "../MessageBubble/MessageBubble";
 import "./Conversation.css";
-import { messages } from "../mocked/mockedConversation";
+import { mockedConversations } from "../mocked/MockedConversations";
+import { Conversation } from "../../Interfaces/mockedConversations.interface";
+import { Message } from "../../Interfaces/mockedConversations.interface";
+import { ConversationProps } from "../../Interfaces/conversationProps.interface";
 
-export interface Message {
-  author: number;
-  text: string;
-}
-
-export function Conversation() {
+export function ConversationComponent(props: ConversationProps) {
   const loggedInUserId = 12;
 
   return (
     <div className="conversation">
-      {messages.map((message: Message, index: number) => (
-        <div
-          key={index}
-          className="messageBubbleAlignFunction"
-          style={{
-            marginLeft: message.author === loggedInUserId ? "auto" : "0px",
-          }}
-        >
-          <div className="message-bubble-margins">
-            <MessageBubble message={message} user={loggedInUserId} />
+      {mockedConversations
+        .find((conversation: Conversation) => {
+          return conversation.conversationId === props.selectedConversationId;
+        })
+        ?.messages.map((mockedConversation: Message, index: number) => (
+          <div
+            key={index}
+            className="message-bubble-align-function"
+            style={{
+              marginLeft:
+                mockedConversation.author === loggedInUserId ? "auto" : "0px",
+            }}
+          >
+            <div className="date-time-styling">
+              {new String(mockedConversation.dateTime)}
+            </div>
+
+            <div className="message-bubble-margins">
+              <MessageBubble
+                message={mockedConversation}
+                user={loggedInUserId}
+              />
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
     </div>
   );
 }
