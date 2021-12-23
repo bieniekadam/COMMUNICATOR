@@ -1,0 +1,17 @@
+.einstein > img {
+  margin: 15px;
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+}
+
+.user-and-text {
+  text-align: left;
+  margin-left: auto;
+  display: flex;
+}
+
+.name-and-text > h4 {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
