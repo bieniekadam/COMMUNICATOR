@@ -1,5 +1,5 @@
 import { LeftColumn } from "../LeftColumn/LeftColumn";
-import { RightColumn } from "../RightColumn/RightColumn1";
+import { RightColumn } from "../RightColumn/RightColumn";
 import { mockedConversations } from "../mocked/MockedConversations";
 import { useState } from "react";
 

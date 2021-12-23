@@ -1,4 +1,4 @@
-import { MessageBubble } from "../MessageBubble/MessageBubble1";
+import { MessageBubble } from "../MessageBubble/MessageBubble";
 import "./Conversation.css";
 import { mockedConversations } from "../mocked/MockedConversations";
 import { Conversation } from "../../Interfaces/mockedConversations.interface";
