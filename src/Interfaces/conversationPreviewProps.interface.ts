@@ -1,11 +1,11 @@
 import { Dispatch, SetStateAction } from "react";
 
 export interface ConversationPreviewProps {
-  conversation: ConversationPreview;
+  conversation: ConversationPreviewData;
   setConversationId: Dispatch<SetStateAction<number>>;
 }
 
-export interface ConversationPreview {
+export interface ConversationPreviewData {
   name: string;
   text: string;
   avatarUrl: string;

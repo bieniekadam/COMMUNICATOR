@@ -1,6 +1,6 @@
 import { Conversation } from "../../Interfaces/mockedConversations.interface";
 
-const moment = require("moment");
+import moment from "moment";
 
 export const mockedConversations: Conversation[] = [
   {

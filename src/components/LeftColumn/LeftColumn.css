@@ -1,0 +1,78 @@
+.left-column {
+  background-color: #282c34;
+  height: 100vh;
+  float: left;
+  width: 315px;
+  color: white;
+}
+
+.top-left-bar {
+  width: 290px;
+  margin-left: 10px;
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 11px;
+}
+
+.fa-user-plus {
+  width: 30px;
+  height: 30px;
+  color: lightblue;
+  margin-top: 13px;
+  margin-bottom: 10px;
+  margin-left: 215px;
+  cursor: pointer;
+}
+
+.fa-user-plus:hover {
+  color: white;
+}
+
+.logo-left-panel {
+  height: 35px;
+  width: 35px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.user-and-text:hover {
+  cursor: pointer;
+  border-color: lightslategray;
+  border-width: 1px;
+  background-color: #363b48;
+  transition: background-color 0.5s linear;
+}
+
+.user-and-text {
+  border: 1px solid;
+  border-color: #282c34;
+  border-radius: 20px;
+  transition: border-color 0.3s linear;
+}
+
+.log-out-button {
+  margin-top: 58.62vh;
+  margin-left: 12px;
+  text-align: center;
+  height: 30px;
+  width: 288px;
+  background-color: #282c34;
+  color: lightblue;
+  border-radius: 8px;
+  transition: border-color 0.3s linear;
+}
+
+.log-out-button:hover {
+  margin-top: 58.62vh;
+  margin-left: 12px;
+  text-align: center;
+  height: 30px;
+  width: 288px;
+  background-color: #404550;
+  color: lightblue;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}

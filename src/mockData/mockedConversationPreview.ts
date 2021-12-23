@@ -1,6 +1,6 @@
-import { ConversationPreview } from "../Interfaces/conversationPreviewProps.interface";
+import { ConversationPreviewData } from "../Interfaces/conversationPreviewProps.interface";
 
-export const MOCKED_MESSAGES: ConversationPreview[] = [
+export const MOCKED_MESSAGES: ConversationPreviewData[] = [
   {
     name: "Albert Einstein",
     text: "Kup ojczulkowi browarka",
