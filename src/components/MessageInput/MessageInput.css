@@ -19,6 +19,7 @@ label {
 textarea {
   height: 120px;
   border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .send-message {

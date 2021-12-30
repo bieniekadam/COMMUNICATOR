@@ -1,6 +1,6 @@
 import { MessageBubble } from "../MessageBubble/MessageBubble";
 import "./Conversation.css";
-import { mockedConversations } from "../mocked/MockedConversations";
+import { mockedConversations } from "../../mockData/mockedConversations";
 import { Conversation } from "../../Interfaces/mockedConversations.interface";
 import { Message } from "../../Interfaces/mockedConversations.interface";
 import { ConversationProps } from "../../Interfaces/conversationProps.interface";

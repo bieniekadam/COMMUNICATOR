@@ -1,8 +1,33 @@
-import { Conversation } from "../../Interfaces/mockedConversations.interface";
+import { Conversation } from "../Interfaces/mockedConversations.interface";
 
 import moment from "moment";
 
 export const mockedConversations: Conversation[] = [
+  {
+    conversationId: 0,
+    messages: [
+      {
+        author: 13,
+        text: "Nie lękaj się przejść przez bramę, która jest chrystus",
+        dateTime: moment().format("MMMM Do YYYY, h:mm:ss a"),
+      },
+      {
+        author: 12,
+        text: "Co mam robić?",
+        dateTime: moment().format("MMMM Do YYYY, h:mm:ss a"),
+      },
+      {
+        author: 13,
+        text: "Żyjmy tak jakby Bóg nie istniał",
+        dateTime: moment().format("MMMM Do YYYY, h:mm:ss a"),
+      },
+      {
+        author: 12,
+        text: "Przepowiednia na dzisiaj?",
+        dateTime: moment().format("MMMM Do YYYY, h:mm:ss a"),
+      },
+    ],
+  },
   {
     conversationId: 1,
     messages: [

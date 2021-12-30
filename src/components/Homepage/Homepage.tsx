@@ -1,11 +1,11 @@
 import { LeftColumn } from "../LeftColumn/LeftColumn";
 import { RightColumn } from "../RightColumn/RightColumn";
-import { mockedConversations } from "../mocked/MockedConversations";
 import { useState } from "react";
+import { MOCKED_MESSAGES } from "../../mockData/mockedConversationPreview";
 
 export function Homepage() {
   const [conversationId, setConversationId] = useState(
-    mockedConversations[0].conversationId
+    MOCKED_MESSAGES[0].conversationId
   );
 
   return (

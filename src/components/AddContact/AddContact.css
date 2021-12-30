@@ -14,6 +14,15 @@
   background-color: white;
 }
 
+.user-picture:hover {
+  cursor: pointer;
+  border-color: lightslategray;
+  border-width: 1px;
+  background-color: #363b48;
+  transition: background-color 0.5s linear;
+  border-radius: 20px;
+}
+
 .user-picture > img {
   margin: 14px;
   width: 45px;
@@ -27,7 +36,7 @@
   display: flex;
   color: black;
   position: relative;
-  /* cursor: pointer; */
+  cursor: pointer;
 }
 
 .search-button {

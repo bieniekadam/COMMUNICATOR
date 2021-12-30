@@ -6,6 +6,11 @@
   color: white;
 }
 
+.messages {
+  overflow-y: scroll;
+  height: 88%;
+}
+
 .top-left-bar {
   width: 290px;
   margin-left: 10px;
@@ -53,8 +58,7 @@
 }
 
 .log-out-button {
-  margin-top: 58.62vh;
-  margin-left: 12px;
+  margin-left: 7px;
   text-align: center;
   height: 30px;
   width: 288px;
@@ -65,14 +69,7 @@
 }
 
 .log-out-button:hover {
-  margin-top: 58.62vh;
-  margin-left: 12px;
-  text-align: center;
-  height: 30px;
-  width: 288px;
   background-color: #404550;
-  color: lightblue;
-  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.2s linear;
 }
