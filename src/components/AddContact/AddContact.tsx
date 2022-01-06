@@ -1,33 +1,53 @@
 import "./AddContact.css";
 import { FaSearchPlus } from "react-icons/fa";
-import {
-  ConversationPreviewData,
-  ConversationPreviewProps,
-} from "../../Interfaces/conversationPreviewProps.interface";
+import { ConversationPreviewData } from "../../Interfaces/conversationPreviewProps.interface";
+import { PROPOSED_CONTACTS } from "../../mockData/mockedProposedContact";
+import { ConversationPreview } from "../ConversationPreview/ConversationPreview";
+import { useState } from "react";
 
 export function AddContact(props: {
   addContact: (contact: ConversationPreviewData) => void;
 }) {
+  let [foundContacts, setFoundContacts] = useState(PROPOSED_CONTACTS);
+
+  function filterContacts(query: string): ConversationPreviewData[] {
+    if (!query) {
+      return PROPOSED_CONTACTS;
+    }
+
+    return foundContacts.filter((person) => {
+      return person.name.includes(query);
+    });
+  }
+
   return (
     <>
       <div className="searching-contact">
-        <input type="text" name="name" placeholder="user name..." />
+        <input
+          type="search"
+          name="name"
+          placeholder="user name..."
+          onChange={(query) =>
+            setFoundContacts(filterContacts(query.currentTarget.value))
+          }
+        />
         <FaSearchPlus onClick={() => ""} className="search-button" />
       </div>
       <div className="proposed-contact">
-        <div className="user-picture">
-          <img
-            src="sc.png"
-            onClick={() =>
-              props.addContact({
-                avatarUrl: "sc.png",
-                name: "Karol Wojtyła",
-                text: "",
-                conversationId: 0,
-              })
-            }
-          ></img>
-          <h3> Karol Wojtyła</h3>
+        how to find
+        <div className="found-contacts">
+          {foundContacts.map((foundContact) => (
+            <ConversationPreview
+              conversation={foundContact}
+              setConversationId={(id) =>
+                props.addContact(
+                  foundContacts.find(
+                    (contact) => contact.conversationId === id
+                  ) as ConversationPreviewData
+                )
+              }
+            />
+          ))}
         </div>
       </div>
     </>
