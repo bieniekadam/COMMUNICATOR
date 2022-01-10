@@ -12,7 +12,7 @@ interface PopupProps {
 
 export function Popup(props: PopupProps): JSX.Element {
   return props.trigger ? (
-    <div className="background-popup">
+    <div onClick={() => props.setTrigger(false)} className="background-popup">
       <div
         style={{
           height: props.height,
