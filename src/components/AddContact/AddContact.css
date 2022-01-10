@@ -1,8 +1,10 @@
 .searching-contact > input {
-  top: -50px;
-  height: 19px;
-  width: 250px;
+  top: -24px;
+  height: 25px;
+  width: 280px;
   position: relative;
+  color: white;
+  background-color: #282c34;
 }
 
 .proposed-contact {
@@ -30,11 +32,31 @@
   /* cursor: pointer; */
 }
 
-.search-button {
+.user-picture:hover {
+  cursor: pointer;
+  border-color: lightslategray;
+  border-width: 1px;
+  background-color: #363b48;
+  transition: background-color 0.5s linear;
+  border-radius: 20px;
+}
+
+.proposed-contact {
+  overflow-y: auto;
+  height: 88%;
+  background-color: #282c34;
+  border-radius: 10px;
+}
+
+.found-contacts {
+  background-color: #282c34;
+}
+
+/* .search-button {
   margin-top: 30px;
   color: black;
   position: relative;
   font-size: 23px;
   cursor: pointer;
   top: -43px;
-}
+} */

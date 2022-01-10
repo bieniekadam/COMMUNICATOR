@@ -16,7 +16,7 @@ export function AddContact(props: {
     }
 
     return foundContacts.filter((person) => {
-      return person.name.includes(query);
+      return person.name.toLowerCase().includes(query.toLowerCase());
     });
   }
 
@@ -31,10 +31,9 @@ export function AddContact(props: {
             setFoundContacts(filterContacts(query.currentTarget.value))
           }
         />
-        <FaSearchPlus onClick={() => ""} className="search-button" />
+        {/* <FaSearchPlus onClick={() => ""} className="search-button" /> */}
       </div>
       <div className="proposed-contact">
-        how to find
         <div className="found-contacts">
           {foundContacts.map((foundContact) => (
             <ConversationPreview

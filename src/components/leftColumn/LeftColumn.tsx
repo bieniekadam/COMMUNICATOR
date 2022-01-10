@@ -13,8 +13,16 @@ export function LeftColumn(props: LeftColumnProps) {
   const messages = MOCKED_MESSAGES;
   const [showPopup, setShowPopup] = useState(false);
 
-  function setNewContact(contact: ConversationPreviewData) {
-    messages.push(contact);
+  function addContact(contact: ConversationPreviewData) {
+    const existingContact: ConversationPreviewData | undefined = messages.find(
+      (message: ConversationPreviewData) => {
+        return contact.conversationId === message.conversationId;
+      }
+    );
+
+    if (!existingContact) {
+      messages.push(contact);
+    }
   }
 
   return (
@@ -28,12 +36,14 @@ export function LeftColumn(props: LeftColumnProps) {
         />
       </div>
 
-      {messages.map((message) => (
-        <ConversationPreview
-          conversation={message}
-          setConversationId={props.setConversationId}
-        />
-      ))}
+      <div className="messages">
+        {messages.map((message) => (
+          <ConversationPreview
+            conversation={message}
+            setConversationId={props.setConversationId}
+          />
+        ))}
+      </div>
 
       <Popup
         trigger={showPopup}
@@ -42,7 +52,7 @@ export function LeftColumn(props: LeftColumnProps) {
         width="300px"
         title="Find user"
       >
-        <AddContact addContact={setNewContact} />
+        <AddContact addContact={addContact} />
       </Popup>
 
       <Link to="/login">

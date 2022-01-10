@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 .App {
   display: flex;
   flex-direction: row;
@@ -23,6 +24,6 @@
   margin-bottom: 0;
 }
 
-a {
+/* a {
   color: unset !important;
-}
+} */
