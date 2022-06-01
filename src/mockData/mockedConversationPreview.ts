@@ -18,5 +18,5 @@ export const MOCKED_MESSAGES: ConversationPreviewData[] = [
     text: "ale zadyma w domu",
     avatarUrl: "adam-malysz.jpg",
     conversationId: 3,
-  },
+  }
 ];

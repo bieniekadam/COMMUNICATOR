@@ -1,6 +1,6 @@
 import { Message } from "../Interfaces/mockedConversations.interface";
 
 export interface MessageBubbleProps {
-  message: Message;
+  message: string;
   user: number;
 }

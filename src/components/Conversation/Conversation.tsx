@@ -1,40 +1,20 @@
-import { MessageBubble } from "../MessageBubble/MessageBubble";
 import "./Conversation.css";
-import { mockedConversations } from "../mocked/MockedConversations";
-import { Conversation } from "../../Interfaces/mockedConversations.interface";
-import { Message } from "../../Interfaces/mockedConversations.interface";
-import { ConversationProps } from "../../Interfaces/conversationProps.interface";
+import MessageBubble from "../MessageBubble/MessageBubble";
+import { useSelector } from "react-redux";
 
-export function ConversationComponent(props: ConversationProps) {
-  const loggedInUserId = 12;
+export default function ConversationComponent(props: any) {
+  const messageState = useSelector(
+    (state: any) => state.ConversationSlice.message
+  );
+  // const newArr = props.message;
+  // const copyOfArr = [...messageState];
+  const reversed = messageState.reverse();
 
   return (
     <div className="conversation">
-      {mockedConversations
-        .find((conversation: Conversation) => {
-          return conversation.conversationId === props.selectedConversationId;
-        })
-        ?.messages.map((mockedConversation: Message, index: number) => (
-          <div
-            key={index}
-            className="message-bubble-align-function"
-            style={{
-              marginLeft:
-                mockedConversation.author === loggedInUserId ? "auto" : "0px",
-            }}
-          >
-            <div className="date-time-styling">
-              {new String(mockedConversation.dateTime)}
-            </div>
-
-            <div className="message-bubble-margins">
-              <MessageBubble
-                message={mockedConversation}
-                user={loggedInUserId}
-              />
-            </div>
-          </div>
-        ))}
+      {reversed.map((el: string, index: number) => (
+        <MessageBubble message={el} user={1} key={index} />
+      ))}
     </div>
   );
 }

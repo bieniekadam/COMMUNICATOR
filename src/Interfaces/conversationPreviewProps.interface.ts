@@ -10,4 +10,5 @@ export interface ConversationPreviewData {
   text: string;
   avatarUrl: string;
   conversationId: number;
+  // setTrigger:React.Dispatch<React.SetStateAction<boolean>>;
 }
