@@ -17,6 +17,7 @@
   border-radius: 10px;
   background-color: lightblue;
 }
+
 .popup-inner {
   position: absolute;
   width: 100%;
@@ -35,6 +36,7 @@
   cursor: pointer;
   font-size: 23px;
 }
+
 .popup-title {
   font-size: 30px;
   color: black;
