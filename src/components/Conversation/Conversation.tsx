@@ -4,6 +4,7 @@ import { mockedConversations } from "../mocked/MockedConversations";
 import { Conversation } from "../../Interfaces/mockedConversations.interface";
 import { Message } from "../../Interfaces/mockedConversations.interface";
 import { ConversationProps } from "../../Interfaces/conversationProps.interface";
+import { start } from "repl";
 
 export function ConversationComponent(props: ConversationProps) {
   const loggedInUserId = 12;
