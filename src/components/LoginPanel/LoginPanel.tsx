@@ -1,5 +1,6 @@
 import "./LoginPanel.css";
 import { Link } from "react-router-dom";
+import GoogleLoginComponent from "../../googlebutton.component";
 
 export function LoginPanel() {
   return (
@@ -13,17 +14,17 @@ export function LoginPanel() {
           className="username"
           type="text"
           name="name"
-          value="Username"
+          placeholder="Username"
           style={{ borderRadius: "12", height: "30px", width: "300px" }}
         />
         <input
           className="password"
           type="text"
           name="name"
-          value="Password"
+          placeholder="Password"
           style={{ borderRadius: "12", height: "30px", width: "300px" }}
         />
-
+        <GoogleLoginComponent />
         <Link to="/">
           <button className="submitButton">Submit</button>
         </Link>

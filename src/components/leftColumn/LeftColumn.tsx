@@ -8,7 +8,7 @@ import { AddContact } from "../AddContact/AddContact";
 import { ConversationPreview } from "../ConversationPreview/ConversationPreview";
 import Popup from "../Popup/Popup";
 import { useDispatch, useSelector } from "react-redux";
-import { ConversationSlice, setPopup } from "../../store/ConversationSlice";
+import { setPopup } from "../../store/ConversationSlice";
 
 export default function LeftColumn(props: LeftColumnProps) {
   const dispatch = useDispatch();
